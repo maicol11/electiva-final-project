@@ -1,0 +1,86 @@
+POST http://localhost:3000/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+  "user_name": "Maicol",
+  "lastname": "Mancera",
+  "email": "msmancera83891@umanizales.edu.co",
+  "contact": {
+    "cellphone": 3225878319,
+    "address": {
+      "city": "Manizales",
+      "code_zip": "170001",
+      "geolocalization": ["-100", "200"],
+    },
+  },
+  "proffession": {
+    "name_job": "developer",
+    "position_job": "developer",
+    "organization": "cred",
+  },
+}
+
+###
+GET http://localhost:3000/api/people HTTP/1.1
+
+###
+GET http://localhost:3000/api/users/632cd775e844168dbe86444d HTTP/1.1
+
+###
+DELETE http://localhost:3000/api/users/632cd775e844168dbe86444d HTTP/1.1
+
+###
+PUT http://localhost:3000/api/users/632cd775e844168dbe86444d HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "User 3",
+    "age": 30,
+    "email": "user3@umanizales.edu.co"
+}
+
+
+###
+POST http://localhost:3000/api/v1/people/person HTTP/1.1
+
+Content-Type: application/json
+
+{
+    "user_name": "Maicol S",
+    "lastname": "Mancera",
+    "age": "24",
+    "email": "msmancera838912@umanizales.edu.co",
+    "profession": "Ing. Sistemas y Telecomunicaciones",
+    "address_work": {
+        "code_zip":"170004",
+        "city_name":"Manizales",
+        "coordinates": [7236426, -2387355]
+    }
+}
+
+###
+GET http://localhost:3000/api/v1/people/ HTTP/1.1
+
+###
+GET http://localhost:3000/api/v1/people/632e2d021fb0dd6f0d93fb6f HTTP/1.1
+
+###
+PUT http://localhost:3000/api/v1/people/632e2d021fb0dd6f0d93fb6f HTTP/1.1
+
+Content-Type: application/json
+
+{
+    "user_name": "Maicol S",
+    "lastname": "Mancera",
+    "age": "24",
+    "email": "msmancera83891@umanizales.edu.co",
+    "profession": "Ing. Sistemas y Telecomunicaciones",
+    "address_work": {
+        "code_zip":"170004",
+        "city_name":"Manizales",
+        "coordinates": [7236426, -2387355]
+    }
+}
+
+###
+DELETE http://localhost:3000/api/v1/people/632e2d021fb0dd6f0d93fb6f HTTP/1.1
